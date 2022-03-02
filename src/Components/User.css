@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+
+.box{
+    border: 2px solid white;
+    height: 200px;
+    width:500px;
+    padding:10px;
+    margin: 0 370px;
+    margin-top: 40px;
+background-color: white;
+    
+}
+.box-label{
+    width:100px;
+}
+.adduser{
+    background-color: blueviolet;
+
+}
+.user{
+    margin-left: 440px;
+    margin-top: 90px;
+
+}
