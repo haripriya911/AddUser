@@ -5,7 +5,9 @@ const User = (props) => {
   const [enterName, setEnterName] = useState("");
   const [enterAge, setEnterAge] = useState("");
   const [error, setError] = useState("");
+
   const addUserHandler = (event) => {
+    event.preventDefault();
     if (enterName.trim().length === 0 || enterAge.trim().length === 0) {
       setError({
         title: "invalid input",
@@ -21,7 +23,6 @@ const User = (props) => {
       return;
     }
     props.onAddUser(enterName, enterAge);
-    event.preventDefault();
 
     console.log(enterName, enterAge);
   };
@@ -32,16 +33,17 @@ const User = (props) => {
   const userAgeHandler = (event) => {
     setEnterAge(event.target.value);
   };
-  const errorHandler = () => {
+  const errorModel = () => {
     setError(null);
   };
+
   return (
     <>
       {error && (
         <ErrorModel
           title={error.title}
           message={error.message}
-          onConfirm={errorHandler}
+          onConfirm={errorModel}
         />
       )}
 
@@ -72,3 +74,4 @@ const User = (props) => {
   );
 };
 export default User;
+        

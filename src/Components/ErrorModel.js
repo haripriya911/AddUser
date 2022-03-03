@@ -3,7 +3,7 @@ import "./ErrorModel.css";
 const ErrorModel = (props) => {
   return (
     <div>
-      <div className="backdrop" onClick={props.onConfirm}>
+      <div className="backdrop" onClick={props.onConfirm} >
         <div className="error">
           <header className="header">
             <h4>{props.title}</h4>

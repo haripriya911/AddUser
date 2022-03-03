@@ -6,7 +6,12 @@ import "./App.css";
 
 function App() {
   const[userList,setUserList]=useState([]);
+  
   const addUserHandler=(uname,uage)=>{
+    
+
+    
+    
     setUserList((prevuserList)=>{
       return[...prevuserList,{name:uname,age:uage}];
     })
@@ -14,7 +19,7 @@ function App() {
   return (
     <>
       <User onAddUser={addUserHandler}></User>
-      <UserList Users={userList} ></UserList>
+     <UserList Users={userList} ></UserList>
     </>
   );
 }
